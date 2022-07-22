@@ -20,3 +20,6 @@ element.addEventListener("click", () => {
   alert('samsung smart fridge user confirmed');
 });
 });
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
