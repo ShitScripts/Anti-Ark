@@ -21,5 +21,23 @@ element.addEventListener("click", () => {
 });
 });
 
+const el = document.getElementById('discord-but');
+el.addEventListener("click", () => {
+	
+
+	swal({
+  	title: 'Not so fast!',
+  	button: {
+	text: "OK",
+	value: true,
+	visible: true,
+	className: "",
+	closeModal: true,
+	},
+  	timer: 3500
+	})
+ 	
+
+});
 document.addEventListener('contextmenu', event => event.preventDefault());
 

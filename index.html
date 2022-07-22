@@ -47,6 +47,7 @@ button{
           filter: drop-shadow(8px 8px 1px #e4e4e4);
   -webkit-transition: 0.1s;
   transition: 0.1s;
+  box-shadow
 
 }
 .btn2{
@@ -75,23 +76,54 @@ color:#fff;
 .swal-button {
 font-size:1.5rem;
 background-color: var(--green)!important;
-  -webkit-filter: drop-shadow(8px 8px 1px #666008);
-          filter: drop-shadow(8px 8px 1px #666008);
+  -webkit-filter: drop-shadow(8px 8px 1px #008000);
+          filter: drop-shadow(8px 8px 1px #008000);
 border-radius: 0.3rem;
+border: var(--green);
   font-family: "Poppins", sans-serif;
 padding: 0.2rem 1rem;
 color:#fff;
 }
 .swal-button:hover{
- -webkit-filter: drop-shadow(0 0 0 #666008);
-          filter: drop-shadow(0 0 0 #666008);
+ -webkit-filter: drop-shadow(0 0 0 #008000);
+          filter: drop-shadow(0 0 0 #008000);
 background-color: var(--green)!important;
 }
 .swal-title {
 font-size:1.5rem;
-font-family: "Poppins", sans-serif;
+font-family: "Poppins", sans-serif;r
 padding: 0.2rem 1rem;
 color:#fff;
+}
+@keyframes slideup {
+0% {margin-top:500x;}
+100% {margin-top:300px;}
+}
+@keyframes slidein {
+100% {margin-left:0;}
+0% {margin-right:2000px;}
+}
+
+#about-server{
+margin-top:300px;
+
+
+}
+#about-server > h1 {
+font-size:33px!important;
+}
+.about-server-sub{
+margin-top:50px;
+position:left;
+animation-name:slidein;
+animation-duration:3s;
+}
+.about-server-sub > h2 {
+font-size:20px!important;
+
+}
+.sub1{
+
 }
 </style>
 </head>
@@ -100,16 +132,23 @@ color:#fff;
     <!--- Particles -->  <div class="animation-wrapper"> <div class="particle particle-1"></div> <div class="particle particle-2"></div> <div class="particle particle-3"></div> <div class="particle particle-4"></div> </div>
     <div class="center">
         <div class="animate__animated animate__jackInTheBox">
-            <h1>Anti Ark Smp</h1> <!--- Server Name -->
+            <h1>Anti Ark Smp</h1> 
             <p>Anti Ark Smp is a minecraft server you can play with your friends feel free to join us!</p> <!--- Description -->
             <div class="animate__animated animate__bounceIn animate__delay-1s">
-                <a href="#"><button class="btn1"><i class="fab fa-discord"></i> Discord</button></a>
+                <a id="discord-but" href="#"><button id="discord-but" class="btn1"><i class="fab fa-discord"></i> Discord</button></a>
                <!-- <a href=""><button class="btn3"><i class="fas fa-poll"></i> Vote</button></a>--->
                 <a style="" id="ip_button" href="#"<button id="ip_button" class="btn2"><i id="ip_button" class="fas fa-shopping-basket"></i> Get ip</button></a>
             </div>
-        </div>
+	    
+	</div>
     </div>
-    <script src="app/js/script.js"></script>
+ <div id="about-server" class="center">
+	
+            
+	
+	
+</div>      
+    <script src="files/js/main-page.js"></script>
     <script src="https://kit.fontawesome.com/5acf4d9e80.js" crossorigin="anonymous"></script>
 </body>
 </html>
