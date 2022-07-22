@@ -1,8 +1,11 @@
 console.log("Anti Ark");
 
-var btn1 = document.querySelector('.btn1');
+const element = document.getElementById('ip_button')
 
-btn1.addEventListener('click', function(event) {
-  console.log('detected click');
-  navigator.clipboard.writeText('play.pretty-hot.xyz');
+element.addEventListener("click", () => {
+	navigator.clipboard.writeText("play.pretty-hot.xyz").then(function() {
+ 	alert('ip has been set to clipboard')
+}, function() {
+  alert('samsung smart fridge user confirmed')
+});
 });
