@@ -1,11 +1,11 @@
-console.log("Anti Ark");
+console.log("Anti Ark website made by Austin287856");
+document.title = "Anti Ark";
 
-const element = document.getElementById('ip_button')
-
+const element = document.getElementById('ip_button');
 element.addEventListener("click", () => {
 	navigator.clipboard.writeText("play.pretty-hot.xyz").then(function() {
- 	alert('ip has been set to clipboard')
+ 	alert('ip has been set to clipboard');
 }, function() {
-  alert('samsung smart fridge user confirmed')
+  alert('samsung smart fridge user confirmed');
 });
 });
