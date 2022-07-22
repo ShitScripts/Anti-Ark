@@ -9,6 +9,8 @@ const notify = require('gulp-notify')
 const babel = require('gulp-babel');
 const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
+const swal = require("sweetalert2");
+
 
 // Use dart-sass for @use
 //sass.compiler = require('dart-sass');

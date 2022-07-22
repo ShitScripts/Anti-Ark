@@ -1,17 +1,21 @@
-const swal = require("sweetalert2");
 
 console.log("Anti Ark website made by Austin287856");
 const element = document.getElementById('ip_button');
 element.addEventListener("click", () => {
 	navigator.clipboard.writeText("play.pretty-hot.xyz").then(function() {
 
-	swal.fire({
-  	icon: 'success',
-  	title: 'ip copied to clipboard',
-  	showConfirmButton: false,
-  	timer: 1500
+	swal({
+  	title: 'Copied to clipboard!',
+  	button: {
+	text: "OK",
+	value: true,
+	visible: true,
+	className: "",
+	closeModal: true,
+	},
+  	timer: 3500
 	})
- 	alert('ip has been set to clipboard');
+ 	
 }, function() {
   alert('samsung smart fridge user confirmed');
 });
