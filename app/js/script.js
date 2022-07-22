@@ -1,5 +1,4 @@
 console.log("Anti Ark website made by Austin287856");
-document.title = "Anti Ark";
 
 const element = document.getElementById('ip_button');
 element.addEventListener("click", () => {
