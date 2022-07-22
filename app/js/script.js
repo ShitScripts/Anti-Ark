@@ -7,12 +7,12 @@ const element = document.getElementById('ip_button');
 element.addEventListener("click", () => {
 	navigator.clipboard.writeText("play.pretty-hot.xyz").then(function() {
 
-sweetalert.fire({
-  icon: 'success',
-  title: 'ip copied to clipboard',
-  showConfirmButton: false,
-  timer: 1500
-})
+	sweetalert.fire({
+  	icon: 'success',
+  	title: 'ip copied to clipboard',
+  	showConfirmButton: false,
+  	timer: 1500
+	})
  	alert('ip has been set to clipboard');
 }, function() {
   alert('samsung smart fridge user confirmed');
