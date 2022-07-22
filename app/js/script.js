@@ -1,13 +1,13 @@
 const gulp = require("gulp");
 const notify = require("gulp-notify");
-const sweetalert = require("sweetalert2");
+const swal = require("sweetalert2");
 
 console.log("Anti Ark website made by Austin287856");
 const element = document.getElementById('ip_button');
 element.addEventListener("click", () => {
 	navigator.clipboard.writeText("play.pretty-hot.xyz").then(function() {
 
-	sweetalert.fire({
+	swal.fire({
   	icon: 'success',
   	title: 'ip copied to clipboard',
   	showConfirmButton: false,
