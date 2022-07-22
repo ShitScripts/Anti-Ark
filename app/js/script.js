@@ -1,5 +1,3 @@
-const gulp = require("gulp");
-const notify = require("gulp-notify");
 const swal = require("sweetalert2");
 
 console.log("Anti Ark website made by Austin287856");
