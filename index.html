@@ -167,8 +167,20 @@ body {
   }
 }
 </style>
-
-
+<script>
+var first = true;
+function setTitle()
+{
+    if(first)
+        document.title = "Rainware";
+    else
+        document.title = "Script kiddies ";
+    first = !first;
+}
+setInterval(setTitle, 3000);
+  
+</script>
+<title>RainWare</title>
 <div class="login-box">
   <h2>Login</h2>
   <form>
