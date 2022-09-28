@@ -169,15 +169,22 @@ body {
 </style>
 <script>
 var first = true;
+  function loop(str){
+  for (var i = 0; i < str.length; i++) {
+  return str.charAt(i)
+}
+  }
 function setTitle()
 {
+  
+  
     if(first)
         document.title = "Rainware";
     else
-        document.title = "Script kiddies ";
+        document.title = loop('Script kiddies');
     first = !first;
 }
-setInterval(setTitle, 3000);
+setInterval(setTitle, 1000);
   
 </script>
 <div class="login-box">
