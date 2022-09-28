@@ -1,155 +1,191 @@
-<!DOCTYPE html>
-<html lang="en"> 
-<head>
-    <title>Anti Ark</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="nofollow"/>
-
-    <meta name="description" content="Anti Ark minecraft server play.pretty-hot.xyz">
-    <meta name="keywords" content="SMP,Anti Ark, Survival 1.19, Minecraft server">
-    <meta name="author" content="pretty-hot.xyz">
-    <link rel="icon" href="assets/logo.ico"> 
-
-    <meta property="og:type" content="Anti Ark Smp">
-    <meta property="og:url" content="https://www.pretty-hot.xyz">
-    <meta property="og:title" content="Anti Ark Smp">
-    <meta property="og:description" content="Anti Ark minecraft server play.pretty-hot.xyz">
-    <meta property="og:image" content="https://image">
-    <meta name="theme-color" content=#12345>
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.pretty-hot.xyz">
-    <meta property="twitter:title" content="Anti Ark Smp">
-    <meta property="twitter:description" content="Anti Ark minecraft server play.pretty-hot.xyz">
-    <meta property="twitter:image" content="https://image">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="dist/style.css"> 
-    <script src="https://kit.fontawesome.com/5acf4d9e80.js" crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
 <style>
-button{
- cursor: pointer;
-  border-radius: 0.3rem;
-  font-family: "Poppins", sans-serif;
+html {
+  height: 100%;
+}
+body {
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  background: linear-gradient(#141e30, #243b55);
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
   color: #fff;
-  margin: 1.5rem 1rem;
-  background-color: white;
-  border-style: none;
-  font-size: 1.5rem;
-  padding: 0.2rem 1rem;
-  -webkit-filter: drop-shadow(8px 8px 1px #e4e4e4);
-          filter: drop-shadow(8px 8px 1px #e4e4e4);
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
-  box-shadow
+  text-align: center;
+}
 
+.login-box .user-box {
+  position: relative;
 }
-.btn2{
-  text-decoration:none;
-font-size:1.5rem;
-background-color: var(--yellow);
-  -webkit-filter: drop-shadow(8px 8px 1px #666008);
-          filter: drop-shadow(8px 8px 1px #666008);
-border-radius: 0.3rem;
-  font-family: "Poppins", sans-serif;
-padding: 0.2rem 1rem;
-color:#fff;
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
 }
-.btn2:hover{
- -webkit-filter: drop-shadow(0 0 0 #666008);
-          filter: drop-shadow(0 0 0 #666008);
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
 }
-.swal-modal {
-  background-color: rgba(43,43,43);
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
 }
-.swal-footer {
-  background-color: rgb(50, 50, 50);
-  margin-top: 32px;
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
   overflow: hidden;
-}
-.swal-button {
-font-size:1.5rem;
-background-color: var(--green)!important;
-  -webkit-filter: drop-shadow(8px 8px 1px #008000);
-          filter: drop-shadow(8px 8px 1px #008000);
-border-radius: 0.3rem;
-border: var(--green);
-  font-family: "Poppins", sans-serif;
-padding: 0.2rem 1rem;
-color:#fff;
-}
-.swal-button:hover{
- -webkit-filter: drop-shadow(0 0 0 #008000);
-          filter: drop-shadow(0 0 0 #008000);
-background-color: var(--green)!important;
-}
-.swal-title {
-font-size:1.5rem;
-font-family: "Poppins", sans-serif;r
-padding: 0.2rem 1rem;
-color:#fff;
-}
-@keyframes slideup {
-0% {margin-top:500x;}
-100% {margin-top:300px;}
-}
-@keyframes slidein {
-100% {margin-left:0;}
-0% {margin-right:2000px;}
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
 }
 
-#about-server{
-margin-top:300px;
-
-
+.login-box a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
 }
-#about-server > h1 {
-font-size:33px!important;
-}
-.about-server-sub{
-margin-top:50px;
-position:left;
-animation-name:slidein;
-animation-duration:3s;
-}
-.about-server-sub > h2 {
-font-size:20px!important;
 
+.login-box a span {
+  position: absolute;
+  display: block;
 }
-.sub1{
 
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
 }
 </style>
-</head>
-<body>
-    <div class="bg"></div>
-    <!--- Particles -->  <div class="animation-wrapper"> <div class="particle particle-1"></div> <div class="particle particle-2"></div> <div class="particle particle-3"></div> <div class="particle particle-4"></div> </div>
-    <div class="center">
-        <div class="animate__animated animate__jackInTheBox">
-            <h1>Anti Ark Smp</h1> 
-            <p>Anti Ark Smp is a minecraft server you can play with your friends feel free to join us!</p> <!--- Description -->
-            <div class="animate__animated animate__bounceIn animate__delay-1s">
-                <a id="discord-but" href="#"><button id="discord-but" class="btn1"><i class="fab fa-discord"></i> Discord</button></a>
-               <!-- <a href=""><button class="btn3"><i class="fas fa-poll"></i> Vote</button></a>--->
-                <a style="" id="ip_button" href="#"<button id="ip_button" class="btn2"><i id="ip_button" class="fas fa-shopping-basket"></i> Get ip</button></a>
-            </div>
-	    
-	</div>
-    </div>
- <div id="about-server" class="center">
-	
-            
-	
-	
-</div>      
-    <script src="files/js/main-page.js"></script>
-    <script src="https://kit.fontawesome.com/5acf4d9e80.js" crossorigin="anonymous"></script>
-</body>
-</html>
 
+
+<div class="login-box">
+  <h2>Login</h2>
+  <form>
+    <div class="user-box">
+      <input type="text" name="" required="">
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="" required="">
+      <label>Password</label>
+    </div>
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </a>
+  </form>
+</div>
